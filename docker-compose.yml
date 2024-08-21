@@ -2,7 +2,9 @@ version: "3.9"
 
 services:
   node:
+    #Dockerfileからイメージをビルド
     build: .
+    #永続的にデータ保存する位置を指定
     volumes:
       - ./:/usr/src/app
     command: sh -c 'cd react-app && npm start'
